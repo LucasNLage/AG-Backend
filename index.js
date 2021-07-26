@@ -32,7 +32,7 @@ wss.on('connection', (ws) => {
     ws.on('message', (request) => {
         console.log('req:', request);
 
-        console.log((new Date()) + ' Recieved a new connection from origin ' + request + '.');
+        // console.log((new Date()) + ' Recieved a new connection from origin ' + request + '.');
 
         wss.clients.forEach((client) => {
             client.send(request);
@@ -40,6 +40,8 @@ wss.on('connection', (ws) => {
     })
 
 });
+
+// 
 
 // setInterval(() => {
 //     wss.clients.forEach((client) => {
